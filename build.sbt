@@ -5,7 +5,7 @@ ThisBuild / organization := "app.tusee"
 
 lazy val hello = (project in file("."))
   .settings(
-    name := "Tusee Auth",
+    name := "Tusee App",
     version := "0.1.0-SNAPSHOT",
     libraryDependencies ++= Seq(
       "org.scalatra" %% "scalatra" % ScalatraVersion,
@@ -22,10 +22,9 @@ lazy val hello = (project in file("."))
       "com.mchange" % "c3p0" % "0.9.5.5"
     ),
     libraryDependencies += "org.bitbucket.b_c" % "jose4j" % "0.7.12",
-    libraryDependencies += "de.mkammerer" % "argon2-jvm" % "2.11"
   )
 
 enablePlugins(SbtTwirl)
 enablePlugins(JettyPlugin)
 
-containerPort in Jetty := 5001
+containerPort in Jetty := 5000
